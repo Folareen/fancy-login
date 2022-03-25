@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+/* container */
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(17, 17, 17);
+    transform: translate(-50%,-50%);
+    width: 320px;
+    padding: 40px;
+    box-sizing: border-box;
+    animation-name: display;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    transition: 1s; 
+}
+.container:hover{
+    box-shadow: 2px 0 5px  rgb(37, 37, 37), 0 2px 5px  rgb(37, 37, 37), -2px 0 5px  rgb(37, 37, 37), 0 -2px 5px  rgb(37, 37, 37);
+}
+@keyframes display{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.container h1{
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    font-family: Tahoma;
+}
+.container input[placeholder="Username"], .container input[placeholder="Password"]{
+    display: block;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 80%;
+    margin: 20px auto;
+    background: transparent;
+    height: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    outline: none;
+    color: rgb(255, 255, 255);
+    transition-timing-function: ease-in;
+    transition-duration: .5s;
+    font-size: .9rem;
+    font-weight: bold;
+}
+.container input[placeholder="Username"]:focus, .container input[placeholder="Password"]:focus{
+    width: 100%;
+    transition: .5s;
+}
+.container input[value="Login"]{
+    display: block;
+    height: 40px;
+    width:70%;
+    margin: 20px auto 10px auto;
+    background-color:rgb(0, 0, 0);
+    color: rgb(128, 128, 128);
+    border: 1.5px solid #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    outline:none;
+    transition: all .5s;
+}
+.container input[value="Login"]:hover{
+    cursor: pointer;
+    background-color: rgb(128, 128, 128);
+    color: rgb(0, 0, 0);
+    border: none;
+    width: 80%;
+}
+.form-box ~ a{
+    display: block;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    font-size: .8rem;
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+}
+.form-box ~ a:hover{
+    text-decoration: underline;
+}
+.links{
+    margin: 30px auto 10px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+.links a{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+}
+.links a:hover{
+    text-decoration: underline;
+}
